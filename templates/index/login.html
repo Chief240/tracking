@@ -1,0 +1,87 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Courier</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <!-- FONTAWESOME STYLES-->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- GOOGLE FONTS-->
+    <link href="{% static '../css-2?family=Open+Sans' %}" rel='stylesheet' type='text/css'>
+
+<style>
+.myhead{
+margin-top:15px;
+margin-bottom:0px;
+text-align:center;
+height: 50px;
+}
+body {
+  background: #f5f6f8;
+}
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+        
+         <div class="row ">
+               
+                <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                          
+                            <div class="panel-body" style="background-color: #f5f6f8; margin-top:150px; border:solid 0px #6495ED; width: 120%; height: 350px">
+							  <h3 class="myhead"><strong><p style="font-size: 27px;">Worldwide Express Courier</p></strong></h3>
+                                <form role="form" action="" method="POST">
+                                  {% csrf_token %}
+                                    <hr>
+																		
+                                   
+                     <div class="form-group input-group">
+                               <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                 <input type="text" class="form-control" placeholder="Enter Username " name="username" value="" required="">
+                                        </div>
+                                        
+				<div class="form-group input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                  <input type="password" class="form-control" placeholder="Enter Your Password" name="password" value="" required="">
+                               </div>
+							
+                            <!-- Remember me -->
+                            <div>
+                            <div class="form-check">
+                            <input type="checkbox" name="remember" class="form-check-input" id="checkbox">
+                            <label class="form-check-label" for="checkbox">Remember Me</label>
+                            </div>
+                        </div>
+                                    
+                                           
+                                            <div class="pull-right">
+                                                   <a href="/"><p style="font-weight: bold; color:black;padding-top: 30px">Back to Site?</p></a>
+                                    
+                                            </div>
+
+
+                               
+                                    
+                                     <br>
+                                     
+                                    <button class="btn btn-light" type="submit" name="login" value="Login" style="outline: none;background:black;color:white;">Login Now</button>
+                                   
+                                    </form>
+                                     
+                            </div>
+                           
+                        </div>
+                
+                
+        </div>
+    </div>
+
+</body>
+</html>

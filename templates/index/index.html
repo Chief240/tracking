@@ -1,0 +1,842 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<head>
+<title>Worldwide Delivery Express Courier
+</title>
+<meta charset="utf-8">
+
+<!-- Page Loader - Needs to be placed in header for loading at top of all content -->
+<script type="text/javascript" src="{% static 'js/pace.min.js' %}"></script>
+<link href="{% static 'css/pace-loading-bar.css' %}" rel="stylesheet">
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.shipping.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/ShippingIcon.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+	
+<!--Owl-->
+<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+<link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+<link href="{% static 'css/owl.transitions.css' %}" rel="stylesheet">
+
+
+<!-- Main Style -->
+<link rel="stylesheet" id="main-style" type="text/css" href="{% static 'css/style.css' %}">
+
+	
+
+
+</head>
+<style>
+.success{
+	list-style: none;
+	background-color: #2e6da4;
+	color: white;
+	box-shadow: 12px 12px 12px green;
+	text-align: center;
+}
+.error{
+	list-style: none;
+	background-color: red;
+	color: white;
+	box-shadow: 12px 12px 12px #e61c66;
+	text-align: center;
+}
+</style>
+<body class="blue page-loading">
+
+
+<!-- Section Start - Header -->
+<section class='header' id='header'>	
+	<!-- Header Top Bar - Start -->
+		<div class="topbar-wrap">
+			<div class="container">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 logo-area">
+						<div class="logo">
+		<div>
+			<i class="icon icon-logo white"></i>
+		</div>
+			<span class="name">Worldwide</span>
+			<span class="name">Express</span>
+			<span class="name"></span>
+		<span class="small">Courier</span>
+	</div>
+				</div>
+				<div class="col-lg-7 col-md-8 col-sm-7 col-xs-5 menu-area">
+
+					<!-- Menu Top Bar - Start -->
+						<div class="topbar">
+							<div class="menu">
+								<div class="primary inviewport animated delay2" data-effect="">
+									<div class='cssmenu'>
+											
+		<!-- Menu - Start -->
+		<ul class='menu-ul'>
+					<li id="home" class='has-sub'><a href='#home'>HOME</a></li>
+					<li class='has-sub'><a href='#tracking-app-tablet'>FEATURES</a></li>
+					<li class='has-sub'><a href='#major-services'>CAPABILITIES </a></li>
+					<li class='has-sub'><a href='#portfolio'>GALLERY</a></li>
+					<li class='has-sub'><a href='#contact'>CONTACT</a></li>
+						<li class='has-sub'><a href='/admin' style='background-color:#03a9f4;'>LOGIN</a></li>		</ul>
+		<!-- Menu - End -->
+											</div>
+											
+								</div>
+								
+							</div>
+							
+						</div>
+					<!-- Menu Top Bar - End -->
+						
+				
+					<!-- Mobile Menu - Start -->
+					<div class="menu-mobile col-xs-10 pull-right cssmenu">
+						<i class="icon icon-menu menu-toggle"></i>
+						<ul class="menu" id='parallax-mobile-menu'>
+						
+						</ul>
+					</div>
+					<!-- Mobile Menu - End -->
+					
+					
+	
+				</div>
+
+
+			</div>
+			
+		</div>
+	<!-- Header Top Bar - End -->
+		
+
+	<div class="header-bg ">
+	
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 slantbar hidden-xs"></div>
+				
+	<!-- Header Tracking Box - Start -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 white-wrap hidden-xs">
+			
+			<div class="white-box">
+
+						<div class="track-order">
+							
+							
+								<div class="track-logo transition">
+									<i class="icon icon-logo"></i>
+								</div>
+
+								<h3 class="box-heading">Track Your Order</h3>
+								<p class="box-tagline">ENTER YOUR TRACK ID FOR INSTANT  SEARCH</p>
+									<style>
+									.searchbtnx {
+									border: 0;
+									color:transparent;
+									float:left;
+									background-color:transparent;
+									-webkit-appearance: none;
+									 background-repeat:no-repeat;
+									 cursor:pointer;
+									 overflow: hidden;
+									 outline:none;
+									}
+									</style>
+								<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+									<form method='POST' action="" class="track-form">
+										{% csrf_token %}
+										<input type="text" name='id' placeholder="Track ID" required>
+										<button class="searchbtnx" type="submit"><i class="icon icon-magnify"></i></button>
+									</form>
+								</div>
+
+							
+						</div>
+			</div>
+		</div>		
+	<!-- Header Tracking Box - End -->
+		
+
+			              <div id="header-slider" class="owl-carousel">
+			
+	<!-- Header Content Slide - Start -->
+	<div style="position:relative;display:inline-block;width:100%;height:auto;">
+		<img src="{% static 'img/banner-1.jpg' %}" alt="Header Image" class="img-responsive">
+		<div class="bg-overlay"></div>
+		
+
+		<div class="main-wrap">
+			
+			<div class="container">
+				
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 main-content">
+					<h1>First Class Logistics</h1>
+										</div>
+			</div>
+		</div>
+		</div>
+	<!-- Header Content Slide - End -->
+
+
+	<!-- Header Content Slide - Start -->
+	<div style="position:relative;display:inline-block;width:100%;height:auto;">
+		<img src="{% static 'img/banner-2.jpg' %}" alt="Header Image" class="img-responsive">
+		<div class="bg-overlay"></div>
+
+
+		<div class="main-wrap">
+			<div class="container">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 main-content">
+					<h1>We Deliver Fast</h1>
+									</div>
+			</div>
+		</div>
+		</div>
+	<!-- Header Content Slide - End -->
+
+
+	<!-- Header Content Slide - Start -->
+	<div style="position:relative;display:inline-block;width:100%;height:auto;">
+		<img src="{% static 'img/banner-3.jpg' %}" alt="Header Image" class="img-responsive">
+		<div class="bg-overlay"></div>
+
+
+		<div class="main-wrap">
+			<div class="container">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 main-content">
+					<h1>Safe and Secure</h1>
+										</div>
+			</div>
+		</div>
+		</div>
+	<!-- Header Content Slide - End -->
+
+			 </div>
+		
+
+
+		
+		<!-- Header Social Icons - Start -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 social-wrap hidden-xs">
+			<div class="social-box">
+				<div class="social-icons-wrap">
+						<a href="#"><i class="icon icon-facebook text-on-primary"></i></a>
+						<a href="#"><i class="icon icon-twitter text-on-primary"></i></a>
+						<a href="#"><i class="icon icon-google-plus text-on-primary"></i></a>
+				</div>
+			</div>
+		</div>
+	<!-- Header Social Icons - End -->
+	
+	</div>
+
+	
+
+</section>
+<!-- Section End - Header -->
+
+<!-- Section Start - Major Services -->
+<section class='major-services gray-boxes' id='major-services'><div class="container">
+	<div class="row">
+			<h1 class="heading">Major Services</h1>
+			<!-- <div class="headul"></div> -->
+			<p class="subheading"> You will benefit from our industry leading first time delivery hit rate which means that the recipient won't have to travel to a sorting office if they miss the delivery, the local courier will attempt to deliver up to three times. For example if your recipient isn't at home but works around the corner, our couriers will usually be only too happy to make a detour to ensure the customer receives their parcel as soon as possible. </p>
+					<!-- Service - Start -->
+		<div class="col-lg-4 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 service inviewport animated delay1" data-effect="fadeInUp">
+			<div class="service-wrap">
+				<div class="pic">
+					<img alt="service-image" class="img-responsive" src="{% static 'img/service-1.jpg' %}">
+					<div class="info-layer transition">
+						<a class="btn btn-primary fancybox" title="Air Freight Service" data-fancybox-group="service-gallery" href="{% static 'img/service-1.jpg' %}"><i class="icon icon-image-area"></i></a>
+					</div>
+					
+				</div>
+				<div class="info">
+					<h4 class="title">Air Freight</h4>
+					<p>Worldwide Express Courier OFFER QUICK & POWERFUL SOLUTION FOR TRANSPORT & a comprehensive range of air air-freight forwarding services that has a good major airports.</p>
+				</div>
+			</div>
+		</div>
+		<!-- Service - End -->
+
+					<!-- Service - Start -->
+		<div class="col-lg-4 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 service inviewport animated delay2" data-effect="fadeInUp">
+			<div class="service-wrap">
+				<div class="pic">
+					<img alt="service-image" class="img-responsive" src="{% static 'img/service-2.jpg' %}">
+					<div class="info-layer transition">
+						<a class="btn btn-primary fancybox" title="Roadway Freight Service" data-fancybox-group="service-gallery" href="{% static 'img/service-2.jpg' %}"><i class="icon icon-image-area"></i></a>
+					</div>
+					
+				</div>
+				<div class="info">
+					<h4 class="title">Roadway Freight</h4>
+					<p>Worldwide Express Courier is not just every other Shipping company, we are Express Courier, hence we guard your valuables like a delicate life. </p>
+				</div>
+			</div>
+		</div>
+		<!-- Service - End -->
+
+					<!-- Service - Start -->
+		<div class="col-lg-4 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 service inviewport animated delay3" data-effect="fadeInUp">
+			<div class="service-wrap">
+				<div class="pic">
+					<img alt="service-image" class="img-responsive" src="{% static 'img/service-3.jpg' %}">
+					<div class="info-layer transition">
+						<a class="btn btn-primary fancybox" title="Ocean Freight Service" data-fancybox-group="service-gallery" href="{% static 'img/service-3.jpg' %}"><i class="icon icon-image-area"></i></a>
+					</div>
+					
+				</div>
+				<div class="info">
+					<h4 class="title">Ocean Freight</h4>
+					<p>Worldwide Express Courier Recruits from within the areas we are located, hence our local staffs knowledge to locate clients is second to none.</p>
+				</div>
+			</div>
+		</div>
+		<!-- Service - End -->
+
+	   </div>
+</div></section>
+<!-- Section End - Major Services -->
+
+<!-- Section Start - Tracking APP -->
+<section class='bg-primary white-text' id='tracking-app-tablet'><div class="container">	<div class="row">
+
+			<h1 class="heading">Track Shipments</h1>
+			<!-- <div class="headul"></div> -->
+			<p class="subheading">Here’s the fastest way to check the status of your shipment. No need to call Customer Service – our online results give you real-time, detailed progress as your shipment speeds through the network.</p>
+
+			<div class=" col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+				<div class="app-tablet">
+					<img src="{% static 'img/app-tablet-blue.png' %}" alt="App Tablet" class="img-responsive tablet-black style-dependent inviewport animated delay2" data-effect="fadeInUp">
+					<img src="{% static 'img/app-tablet-locations-blue.png' %}" alt="App Tablet Locations" class="img-responsive tablet-black-locations style-dependent inviewport animated delay6" data-effect="fadeInDown">
+				</div>
+			</div>
+	</div>
+
+	</div></section>
+<!-- Section End - Tracking APP -->
+
+
+<!-- Section Start - Features -->
+<section class='bg-lightgray'>
+	<div class="container">	
+		<div class="row">
+				<div class="features-wrap features-small full">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="row">
+						
+
+		<!-- Feature - Start -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 left-icon feature inviewport animated delay1" data-effect="fadeInUp">
+			<div class="icon-wrap">	
+				<i class="icon icon-air6"></i>
+			</div>
+			<div class="info">
+				<h5 class="title">Quickest Cargo</h5>
+				<p>The Worldwide Express Courier daily carriage of parcels using a combination of road and air transport. Delivery time ranges from 1 to 4 working days. Shipments can also be delivered before 9, 10 or 12.</p>				
+			</div>
+		</div>
+		<!-- Feature - End -->
+
+						
+
+		<!-- Feature - Start -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 left-icon feature inviewport animated delay2" data-effect="fadeInUp">
+			<div class="icon-wrap">	
+				<i class="icon icon-boat17"></i>
+			</div>
+			<div class="info">
+				<h5 class="title">Customer Service</h5>
+				<p>Whatever little niggles and worries you may have about using a courier service, we aim to eliminate it. We offer a range of services that can go hand in hand to make a convenient.</p>				
+			</div>
+		</div>
+		<!-- Feature - End -->
+
+						
+
+		<!-- Feature - Start -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 left-icon feature inviewport animated delay3" data-effect="fadeInUp">
+			<div class="icon-wrap">	
+				<i class="icon icon-delivery18"></i>
+			</div>
+			<div class="info">
+				<h5 class="title">Transportation</h5>
+				<p>We provide quality logistic and transport services. When shipping with us, you have no need for worries. We ensure your package gets to wherever you are sending it without delay.</p>				
+			</div>
+		</div>
+		<!-- Feature - End -->
+		</div>
+
+													
+		<div class="row">
+		<!-- Feature - Start -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 left-icon feature inviewport animated delay1" data-effect="fadeInUp">
+			<div class="icon-wrap">	
+				<i class="icon icon-packages2"></i>
+			</div>
+			<div class="info">
+				<h5 class="title">Logistic Service</h5>
+				<p>Professional And Economic Handling Of Your Mailroom And Courier Service Requirements With Various Flexibilities In Pick-Up And Delivery Of Internal And External Office Documents.</p>				
+			</div>
+		</div>
+		<!-- Feature - End -->
+
+							
+
+		<!-- Feature - Start -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 left-icon feature inviewport animated delay2" data-effect="fadeInUp">
+			<div class="icon-wrap">	
+				<i class="icon icon-commercial15"></i>
+			</div>
+			<div class="info">
+				<h5 class="title">Maintenance</h5>
+				<p>We provide quality logistic and transport services. Our Experience In Creating “Complete” Logistics Systems Gives Us Considerable Flexibility In How We Work With You.</p>				
+			</div>
+		</div>
+		<!-- Feature - End -->
+
+							
+
+		<!-- Feature - Start -->
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 left-icon feature inviewport animated delay3" data-effect="fadeInUp">
+			<div class="icon-wrap">	
+				<i class="icon icon-delivery27"></i>
+			</div>
+			<div class="info">
+				<h5 class="title">Automated Tracking</h5>
+				<p>Here’s the fastest way to check the status of your shipment. No need to call Customer Service – our online results give you detailed progress as your shipment speeds through.</p>				
+			</div>
+		</div>
+		<!-- Feature - End -->
+
+						
+					</div>
+				</div>
+				
+			</div>
+	   </div>
+</div></section>
+<!-- Section End - Features -->
+
+<!-- Section Start - Worldwide Centres -->
+<section class='bg-black' id='worldwide'><div class="container">
+	<div class="row">
+			<h1 class="heading text-white">Worldwide Centres</h1>
+			<!-- <div class="headul"></div> -->
+			<p class="subheading text-white">With our wide range of express parcel and package services, along with shipping and tracking solutions to fit your needs.</p>
+			<div class="worldwide col-md-12 col-xs-12">
+				<div class="map">
+					<img src="{% static 'img/map.png' %}" class="img-responsive" alt="Map image">
+				</div>
+				<div class="map-locations inviewport animated delay2" data-effect="fadeIn">
+					<img src="{% static 'img/map-locations-blue.png' %}" class="img-responsive style-dependent" alt="Map Locations">
+				</div>
+				<div class="map-connect inviewport animated delay6" data-effect="fadeIn">
+					<img src="{% static 'img/map-connect-blue.png' %}" class="img-responsive style-dependent" alt="Map Connections">
+				</div>
+
+			</div>
+	   </div>
+</div></section>
+<!-- Section End - Worldwide Centres -->
+
+
+<!-- Section Start - Service Estimate -->
+<section class='estimate' id='estimate'>	<div class="estimate-wrap">
+		<div class="row">
+		<div class="col-lg-8 col-md-8 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-sm-10  col-xs-offset-1 col-xs-10 ">
+			<h1 class="heading left-align">Service Estimate</h1>
+			<!-- <div class="headul left-align"></div> -->
+			<p class="subheading left-align">Use the Shipping Calculator for estimated shipping costs based on details below.</p>
+		</div>
+
+			<div class="col-lg-4 col-md-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-sm-10  col-xs-offset-1 col-xs-10 ">
+				
+	<!-- Estimate Form - Start -->
+	<div class='row'><form action='#' method='post'><div class='col-xs-12'><label>Load Type</label><input type='text' placeholder='' class='transition' id='est_load_type'></div><div class='col-xs-6'><label>Quantity</label><input type='text' placeholder='' class='transition' id='est_qty'></div><div class='col-xs-6'><label>Weight</label><input type='text' placeholder='' class='transition' id='est_weight'></div><div class='col-xs-4'><label>Length</label><input type='text' placeholder='' class='transition' id='est_length'></div><div class='col-xs-4'><label>Height</label><input type='text' placeholder='' class='transition' id='est_height'></div><div class='col-xs-4'><label>Width</label><input type='text' placeholder='' class='transition' id='est_width'></div><div class='col-xs-12'><label>Total (Auto Calculate)</label><input type='text' placeholder='' class='transition' id='est_total'></div></form></div>
+	<!-- Estimate Form - End -->
+				</div>
+
+			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 pic">
+				<img src="{% static 'img/estimate-fork-blue.jpg' %}" class="img-responsive style-dependent" alt="Estimate Fork Image">
+			</div>
+		</div>
+	</div>
+
+</section>
+<!-- Section End - Service Estimate -->
+
+<!-- Section Start - Showcase -->
+<section id='portfolio'><div class="container">
+	<div class="row gallery-row">
+			<h1 class="heading">Showcase</h1>
+			<!-- <div class="headul"></div> -->
+			<p class="subheading">Through over 250 international agents and offices the people at Worldwide Express Courier are pulled together across all countries and divisions by one guiding principle, that is to deliver value to the client.</p>
+
+			<!-- Filter Categories - Start -->
+
+			<div class="filter-categories filter-mixitup">
+
+				
+<span class="btn filter " data-filter="all">All</span>
+
+				
+<span class="btn filter " data-filter=".cargo">Cargo</span>
+
+				
+<span class="btn filter " data-filter=".roadway">Roadway</span>
+
+				
+<span class="btn filter " data-filter=".airway">Airway</span>
+
+				
+<span class="btn filter " data-filter=".ocean">Ocean</span>
+
+			</div>
+			<!-- Filter Categories - End -->
+
+			<!-- Portfolio Items - Start -->
+			<div class="filter-items filter-mixitup  inviewport animated " data-effect="fadeIn" id="gallery-mixitup">
+				
+			<!-- Item - Start -->
+<div class="filter-item airway col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	<div class="wrap">
+		<img alt="gallery-image" src="{% static 'img/gallery-1.jpg' %}" class="img-responsive transition">
+		<div class="info transition">
+			<a class="btn btn-primary fancybox" title="International Freight" data-fancybox-group="gallery" href="{% static 'img/gallery-1.jpg' %}"><i class="icon icon-image-area"></i></a>
+		</div>
+	</div>
+
+	<div class="title-wrap">International Freight</div>
+</div>
+			<!-- Item - End -->
+
+
+				
+			<!-- Item - Start -->
+<div class="filter-item roadway col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	<div class="wrap">
+		<img alt="gallery-image" src="{% static 'img/gallery-2.jpg' %}" class="img-responsive transition">
+		<div class="info transition">
+			<a class="btn btn-primary fancybox" title="Roadway national services" data-fancybox-group="gallery" href="{% static 'img/gallery-2.jpg' %}"><i class="icon icon-video"></i></a>
+		</div>
+	</div>
+
+	<div class="title-wrap">Roadway national services</div>
+</div>
+			<!-- Item - End -->
+
+
+				
+			<!-- Item - Start -->
+<div class="filter-item ocean col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	<div class="wrap">
+		<img alt="gallery-image" src="{% static 'img/gallery-3.jpg' %}" class="img-responsive transition">
+		<div class="info transition">
+			<a class="btn btn-primary fancybox" title="Cargo and Shipments" data-fancybox-group="gallery" href="{% static 'img/gallery-3.jpg' %}"><i class="icon icon-image-area"></i></a>
+		</div>
+	</div>
+
+	<div class="title-wrap">Cargo and Shipments</div>
+</div>
+			<!-- Item - End -->
+
+
+				
+			<!-- Item - Start -->
+<div class="filter-item cargo col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	<div class="wrap">
+		<img alt="gallery-image" src="{% static 'img/gallery-4.jpg' %}" class="img-responsive transition">
+		<div class="info transition">
+			<a class="btn btn-primary fancybox" title="Rail Transport " data-fancybox-group="gallery" href="{% static 'img/gallery-4.jpg' %}"><i class="icon icon-image-area"></i></a>
+		</div>
+	</div>
+
+	<div class="title-wrap">Rail Transport </div>
+</div>
+			<!-- Item - End -->
+
+
+				
+			<!-- Item - Start -->
+<div class="filter-item airway col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	<div class="wrap">
+		<img alt="gallery-image" src="{% static 'img/gallery-5.jpg' %}" class="img-responsive transition">
+		<div class="info transition">
+			<a class="btn btn-primary fancybox" title="Fast Air Services" data-fancybox-group="gallery" href="{% static 'img/gallery-5.jpg' %}"><i class="icon icon-image-area"></i></a>
+		</div>
+	</div>
+
+	<div class="title-wrap">Fast Air Services</div>
+</div>
+			<!-- Item - End -->
+
+
+				
+			<!-- Item - Start -->
+<div class="filter-item cargo col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	<div class="wrap">
+		<img alt="gallery-image" src="{% static 'img/gallery-6.jpg' %}" class="img-responsive transition">
+		<div class="info transition">
+			<a class="btn btn-primary fancybox" title="Warehousing and storage" data-fancybox-group="gallery" href="{% static 'img/gallery-6.jpg' %}"><i class="icon icon-video"></i></a>
+		</div>
+	</div>
+
+	<div class="title-wrap">Warehousing and storage</div>
+</div>
+			<!-- Item - End -->
+
+
+																			</div>
+			<!-- Portfolio Items - End -->
+		</div>
+
+</div></section>
+<!-- Section End - Showcase -->
+
+<!-- Section Start - Our Clients -->
+<section class='clients bg-primary white-text' id='clients'><div class="container">	<div class="row">
+	<div class="col-md-12 col-xs-12">
+			<h1 class="heading left-align">Our Clients</h1>
+			<!-- <div class="headul left-align"></div> -->
+			<p class="subheading left-align">To our many customers, thank you for your business and loyalty!<br>Happy customers are vital to our success, as are customer testimonials and referrals. If you are a current Logistics customer, we’d be grateful if you could spare just a few moments to write a short testimonial on the services that we provide to you, your experience with us, and what you liked the most. If you’re currently not working with us, we invite you to become a customer and experience for yourself how we put the “plus” in Logistics by doing all of the extra little things you need to be successful.</p>
+
+					<!-- Client Image - Start -->
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 client inviewport animated delay1" data-effect="fadeInUp">
+			<h4><img alt="client-logo" src="{% static 'img/client-1.png' %}" class="img-responsive"></h4>
+		</div>
+		<!-- Client Image - End -->
+					<!-- Client Image - Start -->
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 client inviewport animated delay2" data-effect="fadeInUp">
+			<h4><img alt="client-logo" src="{% static 'img/client-2.png' %}" class="img-responsive"></h4>
+		</div>
+		<!-- Client Image - End -->
+					<!-- Client Image - Start -->
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 client inviewport animated delay3" data-effect="fadeInUp">
+			<h4><img alt="client-logo" src="{% static 'img/client-3.png' %}" class="img-responsive"></h4>
+		</div>
+		<!-- Client Image - End -->
+					<!-- Client Image - Start -->
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 client inviewport animated delay4" data-effect="fadeInUp">
+			<h4><img alt="client-logo" src="{% static 'img/client-4.png' %}" class="img-responsive"></h4>
+		</div>
+		<!-- Client Image - End -->
+
+				   </div>
+	</div>
+	
+	</div></section>
+<!-- Section End - Our Clients -->
+
+
+
+<!-- Section Start - Testimonials -->
+<section class='testimonials parallax ' id='testimonials'><div class="bg-overlay"></div><div class="container">	<div class="row">
+
+			<h1 class="heading">Testimonials</h1>
+			<!-- <div class="headul"></div> -->
+
+			<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+			<div class="row">
+						
+		<!-- Testimonials Carousel - Start -->
+            <ul id="testimonial-carousel" class="owl-carousel">
+            			<!-- Testimonial - Start -->
+		<li class="">
+	              <h5 class="testi" data-id="testi-1">
+		              Shipping Logistics is one of the top logistics providers in the industry. and first class customer service and live by the 'Never Say Never' attitude to accomplish every mission.	              </h5>
+	              <div class="testi_by">
+	              	<div class="pic">
+	              		<img src="{% static 'img/avatar-1.jpg' %}" alt="User Avatar Image">
+	              	</div>
+	              	<div class="name">Kate Douglas</div>
+	              	<div class="company">DAPS Co. In.</div>
+	              </div>
+	              <!-- <div class="tweet_by">Kate Douglas</div>
+	              <div class="tweet_time">1 day ago</div> -->
+		</li>
+		<!-- Testimonial - End -->
+            			<!-- Testimonial - Start -->
+		<li class="">
+	              <h5 class="testi" data-id="testi-2">
+		              Their staff is knowledgeable and their response time is prompt.  I have always found their rates competitive, but it is their service that adds the extra value for me.   	              </h5>
+	              <div class="testi_by">
+	              	<div class="pic">
+	              		<img src="{% static 'img/avatar-2.jpg' %}" alt="User Avatar Image">
+	              	</div>
+	              	<div class="name">Jim Arthur</div>
+	              	<div class="company">PaRaDoX Co. In.</div>
+	              </div>
+	              <!-- <div class="tweet_by">Jim Arthur</div>
+	              <div class="tweet_time">1 day ago</div> -->
+		</li>
+		<!-- Testimonial - End -->
+            			<!-- Testimonial - Start -->
+		<li class="">
+	              <h5 class="testi" data-id="testi-1">
+		              Customer service and availability is superb.” They are always checking status and following up all our shipments. Customs clearance is on time and we never have to rush. Thank you!“           </h5>
+	              <div class="testi_by">
+	              	<div class="pic">
+	              		<img src="{% static 'img/avatar-1.jpg' %}" alt="User Avatar Image">
+	              	</div>
+	              	<div class="name">Kate Douglas</div>
+	              	<div class="company">JollyChill Co. In.</div>
+	              </div>
+	              <!-- <div class="tweet_by">Kate Douglas</div>
+	              <div class="tweet_time">1 day ago</div> -->
+		</li>
+		<!-- Testimonial - End -->
+            		
+            </ul>
+		<!-- Testimonials Carousel - End -->
+				</div>
+			</div>
+
+	   </div>
+
+	</div></section>
+<!-- Section End - Testimonials -->
+
+
+<!-- Section Start - Get In Touch -->
+<section class='contact contact-small' id='contact'>
+	<div class="container">		
+		<div class="row">
+			<h1 class="heading">Get In Touch</h1>
+			<!-- <div class="headul">
+				
+			</div> -->
+			<p class="subheading">How can we help you? Let us know what you need and we’ll get back to you as quickly as possible.</p>
+
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+				
+	<!-- Contact Form - Start -->
+	<div class='row'>
+		<form action='index2/' method='POST'>
+			{% csrf_token %}
+		<div class='col-xs-6'>
+			<input type='text' placeholder='Name' name="name" class='transition' id='c_name' required>
+		</div>
+		<div class='col-xs-6'>
+			<input type='email' placeholder='Email' name="email" class='transition' id='c_email' required>
+		</div>
+		<div class='col-xs-12'>
+			<textarea class='transition' placeholder='Message' name="message" id='c_message' required></textarea>
+		</div>
+		<div id='response_email' class='col-xs-12'>
+		</div>
+		<div class='col-xs-10' id="Growl">
+		<h5>
+		{% for message in messages %}
+		{% if message.tags == 'success'%}
+		<div class="toast-body success text-light position-fixed"  style="z-index: 11; border-radius: 4px;">{{message}}</div>
+		{% endif %}
+		{% if message.tags == 'error'%}
+		<div class="toast-body error text-light position-fixed"  style="z-index: 11; border-radius: 4px;">{{message}}</div>
+		{% endif %}
+		{% endfor %}
+		</h5>
+		</div>
+		<div class='col-xs-4'>
+			<button type='submit' class='btn btn-primary'>Send Message</button>
+		</div>
+		
+	</form>
+</div>
+	<!-- Contact Form - End -->
+				</div>
+
+
+			
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+				<div class="contact-info">
+					<i class="icon icon-envelope"></i>
+					<div class="title">Email</div>
+					<div class="value">Support@worldwideexpresscourier.link</div>
+				</div>
+				<div class="contact-info">
+					<i class="icon icon-phone"></i>
+					<div class="title">Phone</div>
+					<div class="value">+02-234-5678-910</div>
+				</div>
+			</div>
+			
+
+		</div>
+</div></section>
+<!-- Section End - Get In Touch -->
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="row">
+                		<div id="contact-map" class="gmap"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Viale%20delle%20Arti,%20123&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></div>
+            		</div>
+		</div>
+
+
+<!-- Section Start - Footer -->
+<section class='footer bg-black parallax ' id='footer'><div class="bg-overlay"></div>
+
+	<!-- Copyright Bar - Start -->
+	<div class="copyright">
+		<div class="col-md-12">
+		<div class="container">
+			<div style="text-align:center;">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp">
+			    <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+				<span>&copy; 2021 Worldwide Express Couriere. All Rights Reserved</span>
+			</div>
+		
+			</div>
+		</div>	
+		</div>
+	</div>
+	<!-- Copyright Bar - End -->
+
+	</section>
+
+<!-- Section End - Footer -->
+<script>
+var messagedel = document.getElementById('Growl')
+
+setTimeout(function(){
+	messagedel.style.display = 'none';
+}, 3000);
+</script>
+
+<!-- Javascript & CSS Files moved to bottom of page for faster loading -->
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.viewportchecker.min.js' %}"></script>
+
+
+	<!--Owl-->
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+			<!--Mixitup -->
+	<script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js' %}"></script>
+	
+	
+	<!--Fancybox -->
+	<script type="text/javascript" src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.fancybox-media.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.fancybox.css' %}" media="screen">
+
+	
+<!-- Main JS -->
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+
+</html>

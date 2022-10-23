@@ -1,0 +1,651 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<title>Shipping - Logistics & Transport | Express Courier</title>
+<meta charset="utf-8"/>
+
+<!-- Page Loader - Needs to be placed in header for loading at top of all content -->
+<script type="text/javascript" src="{% static 'js/pace.min.js' %}"></script>
+<link href="{% static 'css/pace-loading-bar.css' %}" rel="stylesheet">
+
+
+		<link rel="stylesheet" type="text/css" href="{% static 'css/animate.shipping.css' %}">
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/ShippingIcon.css' %}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+	
+	<!-- Main Style -->
+	<link rel="stylesheet" id="main-style" type="text/css" href="{% static 'css/style.css' %}">
+
+	
+
+
+</head>
+<body class="blue page-loading ">
+
+
+<!-- Section Start - Header -->
+<section class='header hidden-print' id='header'>	
+	<!-- Header Top Bar - Start -->
+		<div class="topbar-wrap">
+			<div class="container">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 logo-area">
+						<div class="logo">
+		<div>
+			<i class="icon icon-logo white"></i>
+		</div>
+    <span class="name">Worldwide</span>
+    <span class="name">Express</span>
+    <span class="name"></span>
+  <span class="small">Courier</span>
+	</div>
+				</div>
+				<div class="col-lg-7 col-md-8 col-sm-7 col-xs-5 menu-area">
+
+					<!-- Menu Top Bar - Start -->
+						<div class="topbar">
+							<div class="menu">
+								<div class="primary inviewport animated delay2" data-effect="">
+									<div class='cssmenu'>
+											
+	<!-- Menu - Start -->
+		<ul class='menu-ul'>
+					<li id="home" class='has-sub'><a href='/'>HOME</a></li>
+					<li class='has-sub'><a href='/tracking_app_tablet'>FEATURES</a></li>
+					<li class='has-sub'><a href='/major_services'>CAPABILITIES </a></li>
+					<li class='has-sub'><a href='/portfolio'>GALLERY</i></a></li>
+					<li class='has-sub'><a href='#contact'>CONTACT</a></li>										
+					<li  class='has-sub'><a href='admin/' style='background-color:#03a9f4;'>LOGIN</a></li>					
+					
+		</ul>
+		<!-- Menu - End -->
+											</div>
+								</div>
+							</div>
+						</div>
+					<!-- Menu Top Bar - End -->
+
+
+					<!-- Mobile Menu - Start -->
+					<div class="menu-mobile col-xs-10 pull-right cssmenu">
+						<i class="icon icon-menu menu-toggle"></i>
+						<ul class="menu" id='parallax-mobile-menu'>
+						
+						</ul>
+					</div>
+					<!-- Mobile Menu - End -->
+
+
+
+				</div>
+
+
+			</div>
+		</div>
+	<!-- Header Top Bar - End -->
+
+
+	<div class="header-bg header-small hidden-print">
+
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 slantbar hidden-xs"></div>
+
+	<!-- Header Tracking Box - Start -->
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 white-wrap hidden-xs">
+			<div class="white-box">
+				<style>
+									.searchbtnx {
+									border: 0;
+									color:transparent;
+									float:left;
+									background-color:transparent;
+									-webkit-appearance: none;
+									 background-repeat:no-repeat;
+									 cursor:pointer;
+									 overflow: hidden;
+									 outline:none;
+									}
+									</style>
+
+						<div class="track-order">
+
+															<div class="track-logo transition col-lg-3 col-md-3 col-sm-3 col-xs-3">
+									<i class="icon icon-logo"></i>
+								</div>
+								<div class=" col-lg-9 col-md-9 col-sm-9 col-xs-9 track-form-wrap">
+									<form method='POST' action="" class="track-form">
+                    {%csrf_token %}
+										<input type="text" name='id' placeholder="Track ID"/>
+										<button class="searchbtnx" type="submit"><i class="icon icon-magnify"></i></button>
+									</form>
+								</div>
+
+							
+						</div>
+			</div>
+		</div>		
+	<!-- Header Tracking Box - End -->
+
+
+		
+	<!-- Header Content Slide - Start -->
+	<div style="position:relative;display:inline-block;width:100%;height:auto;">
+		<img src="{% static 'img/banner-3.jpg' %}" alt="Header Image" class="img-responsive">
+		<div class="bg-overlay"></div>
+
+
+		<div class="main-wrap">
+			<div class="container">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 main-content">
+					<h1>Track Order</h1>
+											<div class="headul"></div>
+											
+									</div>
+			</div>
+		</div>
+		</div>
+	<!-- Header Content Slide - End -->
+
+
+
+
+		
+	
+	</div>
+
+	
+
+</section>
+<!-- Section End - Header -->
+
+<!-- Section Start - Tracking App -->
+<section class='bg-lightgray' id='tracking-app-mobile'><div class="container">	<div class="row">
+			<h1 class="heading hidden-print">Shipment Details</h1>
+			<div class="headul hidden-print"></div>
+			<p class="subheading hidden-print" style=" padding: 0px 50px 10px 50px;"><b>Tracking ID: </b> {{data.TRACKING_ID}}</p>
+			
+			<div class="features-wrap " style="margin-top: 0px!important;">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="row">
+						
+
+		         <style>
+   
+        .page-wrap { width: 800px; margin: 0 auto;page-break-after: always; }
+
+        textarea { border: 0; font: 14px Helvetica, Arial, sans-serif; overflow: hidden; resize: none; }
+        table { border-collapse: collapse; }
+        table td, table th { border: 1px solid black; padding: 5px; }
+		tr.noBorder td {
+		  border: 0;
+		}
+
+		td.Border td {
+		  border: 1px;
+		}
+        
+      
+        #address { width: 250px; height: 150px; float: left; }
+        #customer { overflow: hidden; }
+        #barcodeHTML  { text-align: center;}
+        #barcodeHTML > div { margin:auto}
+        #customer-title { font-size: 20px; font-weight: bold; float: left; }
+
+        #meta { margin-top: 1px; width: 100%; float: right; }
+        #meta td { text-align: right;  }
+        #meta td.meta-head { text-align: left; background: #6c757d; }
+        #meta td textarea { width: 100%; height: 20px; text-align: right; }
+
+		#signing { margin-top: 0px; width: 100%; float: center; }
+        #signing td { text-align: center;  }
+        #signing td.signing-head { text-align: center; background: #eee; }
+        #signing td textarea { width: 100%; height: 20px; text-align: center; }
+
+        #items { clear: both; width: 100%; margin: 30px 0 0 0; border: 1px solid black; }
+        #items th { background: #6c757d; }
+        #items textarea { width: 80px; height: 50px; }
+        #items tr.item-row td {  vertical-align: top; }
+        #items td.description { width: 300px; }
+        #items td.item-name { width: 175px; }
+        #items td.description textarea, #items td.item-name textarea { width: 100%; }
+        #items td.total-line { border-right: 0; text-align: right; }
+        #items td.total-value { border-left: 0; padding: 10px; }
+        #items td.total-value textarea { height: 20px; background: none; }
+        #items td.balance { background: #6c757d; }
+        #items td.blank { border: 0; }
+
+        #terms { text-align: center; margin: 20px 0 0 0; }
+        #terms h5 { text-transform: uppercase; font: 13px Helvetica, Sans-Serif; letter-spacing: 10px; border-bottom: 1px solid black; padding: 0 0 8px 0; margin: 0 0 8px 0; }
+        #terms textarea { width: 100%; text-align: center;}
+
+
+
+        .delete-wpr { position: relative; }
+        .delete { display: block; color: #000; text-decoration: none; position: absolute; background: #EEEEEE; font-weight: bold; padding: 0px 3px; border: 1px solid; top: -6px; left: -22px; font-family: Verdana; font-size: 12px; }
+
+        /* Extra CSS for Print Button*/
+        .button {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            margin-top: 20px;
+            padding: 12px 12px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-transition: all 60ms ease-in-out;
+            transition: all 60ms ease-in-out;
+            text-align: center;
+            white-space: nowrap;
+            text-decoration: none !important;
+
+            color: #fff;
+            border: 0 none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.3;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 160px;
+            -ms-flex: 0 0 160px;
+            flex: 0 0 160px;
+        }
+        .button:hover {
+            -webkit-transition: all 60ms ease;
+            transition: all 60ms ease;
+            opacity: .85;
+        }
+        .button:active {
+            -webkit-transition: all 60ms ease;
+            transition: all 60ms ease;
+            opacity: .75;
+        }
+        .button:focus {
+            outline: 1px dotted #959595;
+            outline-offset: -4px;
+        }
+
+        .button.-regular {
+            color: #202129;
+            background-color: #edeeee;
+        }
+        .button.-regular:hover {
+            color: #202129;
+            background-color: #e1e2e2;
+            opacity: 1;
+        }
+        .button.-regular:active {
+            background-color: #d5d6d6;
+            opacity: 1;
+        }
+
+        .button.-dark {
+            color: #FFFFFF;
+            background: #333030;
+        }
+        .button.-dark:focus {
+            outline: 1px dotted white;
+            outline-offset: -4px;
+        }
+
+        @media print
+        {
+        .page-wrap { page-break-after: always; }
+            .no-print, .no-print *
+            {
+                display: none !important;
+            }
+        }
+		h4 {
+			border-bottom: 1px solid black;
+		}
+
+              
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  font-family: tahoma;
+    
+}
+th {
+    vertical-align: bottom;
+    background-color: #343a40;
+	color: #fff;
+	text-align: left;
+    border-color: #454d55;
+	font-weight: 500;
+    border-bottom-width: 1px;
+	padding: 8px;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+	
+}
+td {
+  text-align: left;
+  padding: 8px;
+}
+.example-preview {
+    border: 4px solid #f3f6f9;
+    margin: 2rem 0;
+    padding: 1.75rem 1.5rem;
+    border-top-left-radius: .42rem;
+    border-top-right-radius: .42rem;
+    display: block;
+}
+
+
+@media print {
+  .hidden-print {
+    display: none !important;
+	visibility: hidden;
+  }
+  .show-print {
+	display:initial!important;
+	visibility: visible;
+	margin-top:-100px;
+	padding-top:0px;
+  }
+  * { overflow: hidden !important; } 
+   .page-wrap {
+               
+                position: fixed;
+                float: none;
+				margin-top:-90px;
+              }
+  
+}
+ 
+          
+</style>
+
+
+            <div class="page-wrap" style="page-break-after: always;border:1px solid black;">
+        <table style="margin:auto;width:100%">
+            <tr>
+                <td style="border: 0;  text-align: left" width="18%">
+        			<div id="logo" style="text-align:left">
+        				<img src='http://cargo.spotlayer.com/themes/spotlayer/assets/admin/media/logos/logo.svg' style="max-height:70px">
+                    </div>
+                </td>
+    			<td style="border: 0;  text-align: center" width="56%">
+    				 <b>Worldwide Express Courier</b> </br>  Phone: 0020104509701<br> www.worldwideexpresscourier.link <br>  Email: Support@worldwideexpresscourier.link </br> </td>
+                <td style="border: 0;  text-align: center" width="48%" id="barcodeHTML">
+                    </br>
+                    <div style="font-size:0;position:relative;width:42px;height:30px;">
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:0px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:2px;height:30px;position:absolute;left:2px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:6px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:9px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:11px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:13px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:15px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:2px;height:30px;position:absolute;left:18px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:21px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:23px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:25px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:2px;height:30px;position:absolute;left:28px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:31px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:2px;height:30px;position:absolute;left:33px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:37px;top:0px;">&nbsp;</div>
+<div style="background-color:black;width:1px;height:30px;position:absolute;left:40px;top:0px;">&nbsp;</div>
+</div>
+
+                    <div class="clearfix"></div>
+                    <p>ID:  {{data.TRACKING_ID}}</p>
+    			</td>
+            </tr>
+        </table>
+        <hr>
+        </br>
+        <div id="customer">
+
+            <table id="meta">
+                <tr>
+                    <td rowspan="5" style="border: 1px solid black; border-right: 1px solid black;text-align: left" width="50%">
+                    <strong>ORIGIN:</strong> {{data.ORIGIN}} </br>
+    				<table id="items"> <br>  </table>
+    				</td>
+                </tr>
+                          <tr>
+                    <td rowspan="5" style="border: 1px solid black; text-align: left" width="50%">
+                    <strong>DESTINATION:</strong> {{data.DESTINATION}}</br>
+    				<table id="items"> <br>  </table>
+    				</td>
+                </tr>
+            </table>
+        </div>
+
+<div class="example-preview"   style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th colspan="4">SENDER</th>
+
+    </tr>
+    <tr>
+      <td><b>SENDER: </b><br> {{data.SENDER_NAME}}</td>
+      <td><b>PHONE:  </b><br> {{data.PHONE}}</td>
+      <td><b>EMAIL:  </b><br> {{data.EMAIL}}</td>
+      <td><b>BOOKING DATE: </b><br> {{data.BOOKING_DATE}}</td>
+     
+    </tr>
+  </table>
+</div>
+
+
+<div class="example-preview"   style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th colspan="4">RECIPIENT</th>
+
+    </tr>
+    <tr>
+      <td><b>RECIPIENT: </b><br>{{data.RECIPIENT_NAME}}</td>
+      <td><b>PHONE:  </b><br>{{data.RECIPIENT_PHONE}}</td>
+      <td><b>EMAIL:  </b><br>{{data.RECIPIENT_EMAIL}}</td>
+      <td><b>SHIPPING DATE: </b><br>{{data.SHIPPING_DATE}}</td>
+     
+    </tr>
+  </table>
+</div>
+
+<div class="example-preview"   style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th colspan="5">PACKAGE CONTENT </th>
+
+    </tr>
+    <tr>
+	
+      <td><b>COURIER: </b><br>{{data.COURIER}}</td>
+      <td><b>CONTENTS:  </b><br>{{data.CONTENTS}} </td>
+      <td><b>QUANTITY:  </b><br>{{data.QUANTITY}}</td>
+      <td><b>WEIGHT:  </b><br>{{data.WEIGHT}}</td>
+      <td><b>STATUS: </b><br>{{data.STATUS}}</td>
+     
+    </tr>
+  </table>
+</div>
+
+
+<div class="example-preview hidden-print"   style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th colspan="5">PACKAGE LOCATION</th>
+
+    </tr>
+    <tr>
+	
+      <td><b>Location: </b> {{data.PACKAGE_LOCATION}}</td>
+     
+    </tr>
+	<tr><td><div width="100px" height="100px" id="service-iframe-location-from-address"></div>
+
+
+<script>
+    
+		var loc = "{{data.PACKAGE_LOCATION}}";
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("width", "100%");
+        iframe.setAttribute("height", "100");
+        iframe.setAttribute("src", "https://maps.google.com/maps?q=" + loc + "&output=embed");
+        document.getElementById("service-iframe-location-from-address").appendChild(iframe);
+
+      
+</script></td></tr>
+  </table>
+</div>
+
+	  
+	  
+	  
+	  
+	  
+
+            <div id="terms">
+                <h5>ACCEPTED</h5>
+    			 <table id="related_transactions" style="width: 100%;padding:20px">
+    				<p align="justify" style="padding:20px">This invoice complies with the requirements and the person who signs declares to be duly authorized.
+					This is a computer-generated document. No signature is required.<br>
+					- Worldwide Express Courier - All Rights Reserved -  © 2021 Courier Store.</p>
+    			</table>
+    			
+    			
+				
+            </div>
+    </div>
+	   
+
+						
+
+
+					</div>
+				</div>
+
+				
+				
+			</div>
+
+	   </div>
+</div></section>
+<!-- Section End - Tracking App -->
+
+
+<!-- Section Start - Get In Touch -->
+<section class='contact contact-small hidden-print' id='contact'><div class="container">		<div class="row">
+			<h1 class="heading">Get In Touch</h1>
+			<div class="headul"></div>
+			<p class="subheading">How can we help you? Let us know what you need and we’ll get back to you as quickly as possible.</p>
+
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+				
+	<!-- Contact Form - Start -->
+	<div class='row'>
+    <form action='/tracking2/' method='POST'>
+      {% csrf_token %}
+      <div class='col-xs-6'>
+        <input type='text' placeholder='Name' name="name" class='transition' id='c_name' >
+      </div>
+      <div class='col-xs-6'>
+        <input type='email' placeholder='Email' name="email" class='transition' id='c_email' >
+      </div>
+      <div class='col-xs-12'>
+        <textarea class='transition' placeholder='Message' name="message" id='c_message' ></textarea>
+      </div>
+      <div id='response_email' class='col-xs-12'>
+      </div>
+      <div class='col-xs-4'><button type='submit' class='btn btn-primary transition'>Send Message</button></div></form></div>
+	<!-- Contact Form - End -->
+				</div>
+
+
+			
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+				<div class="contact-info">
+					<i class="icon icon-envelope"></i>
+					<div class="title">Email</div>
+					<div class="value">Support@worldwideexpresscourier.link</div>
+				</div>
+				<div class="contact-info">
+					<i class="icon icon-phone"></i>
+					<div class="title">Phone</div>
+					<div class="value">+02-234-5678-910</div>
+				</div>
+			</div>
+			
+
+		</div>
+</div></section>
+<!-- Section End - Get In Touch -->
+
+
+<div class="col-md-12 col-sm-12 col-xs-12 hidden-print">
+  <div class="row">
+    <div id="contact-map" class="gmap"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Viale%20delle%20Arti,%20123&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe></div>
+  </div>
+		</div>
+
+
+<!-- Section Start - Footer -->
+<section class='footer bg-black parallax hidden-print' id='footer'><div class="bg-overlay"></div>
+
+<!-- Copyright Bar - Start -->
+	<div class="copyright ">
+		<div class="col-md-12">
+		<div class="container">
+			<div style="text-align:center;">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp" >
+			<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+				<span >&copy; 2021 Worldwide Express Courier. All Rights Reserved</span>
+			</div>
+		
+			</div>
+		</div>	
+		</div>
+	</div>
+	<!-- Copyright Bar - End -->
+	
+
+	</section>
+<!-- Section End - Footer -->
+
+
+<!-- Javascript & CSS Files moved to bottom of page for faster loading -->
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.viewportchecker.min.js' %}"></script>
+
+
+<!-- Main JS -->
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
